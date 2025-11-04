@@ -1,0 +1,37 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+    };
+
+    kscan0: kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        label = "KSCAN";
+        diode-direction = "col2row";
+
+        // Rows are specified in order from top to bottom
+        row-gpios
+            = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Top row
+            , <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Middle row
+            , <&gpio0 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // Bottom row
+            , <&gpio0 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Thumbfan row
+            ;
+
+        // Columns are specified from outer to inner
+        col-gpios
+            = <&gpio0 4 GPIO_ACTIVE_HIGH> // Outer column
+            , <&gpio0 5 GPIO_ACTIVE_HIGH> // Pinky column
+            , <&gpio0 6 GPIO_ACTIVE_HIGH> // Ring column
+            , <&gpio0 7 GPIO_ACTIVE_HIGH> // Middle column
+            , <&gpio0 8 GPIO_ACTIVE_HIGH> // Index column
+            , <&gpio0 9 GPIO_ACTIVE_HIGH> // Inner column
+            ;
+    };
+};
