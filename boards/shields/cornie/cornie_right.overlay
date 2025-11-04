@@ -1,0 +1,18 @@
+/*
+ * Cornie right overlay - column wiring for right half (mirrored)
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "cornie.dtsi"
+
+/ {
+    &kscan0 {
+        /* Columns are specified from outer to inner (mirrored) */
+        col-gpios = <&gpio0 9 GPIO_ACTIVE_HIGH> /* Inner column (now outer on right) */,
+                   <&gpio0 8 GPIO_ACTIVE_HIGH> /* Index column */,
+                   <&gpio0 7 GPIO_ACTIVE_HIGH> /* Middle column */,
+                   <&gpio0 6 GPIO_ACTIVE_HIGH> /* Ring column */,
+                   <&gpio0 5 GPIO_ACTIVE_HIGH> /* Pinky column */,
+                   <&gpio0 4 GPIO_ACTIVE_HIGH> /* Outer column (now inner on right) */;
+    };
+};
