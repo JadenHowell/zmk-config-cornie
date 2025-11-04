@@ -1,0 +1,11 @@
+if(CONFIG_SHIELD_CORNIE_LEFT)
+    zephyr_library()
+    zephyr_library_include_directories(${ZEPHYR_KMOSIS_MODULE_DIR}/include)
+    zephyr_library_include_directories(${ZEPHYR_BASE}/drivers)
+endif()
+
+if(CONFIG_SHIELD_CORNIE_RIGHT)
+    zephyr_library()
+    zephyr_library_include_directories(${ZEPHYR_KMOSIS_MODULE_DIR}/include)
+    zephyr_library_include_directories(${ZEPHYR_BASE}/drivers)
+endif()
