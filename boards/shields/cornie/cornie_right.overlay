@@ -5,12 +5,13 @@
 };
 
 &kscan0 {
+    /*Columns are listed from innermost to outermost pins*/
     col-gpios
-        = <&gpio0 9 GPIO_ACTIVE_HIGH> /* Inner column (now outer on right) */
-        , <&gpio0 8 GPIO_ACTIVE_HIGH> /* Index column */
-        , <&gpio0 7 GPIO_ACTIVE_HIGH> /* Middle column *
-        , <&gpio0 6 GPIO_ACTIVE_HIGH> /* Ring column */
-        , <&gpio0 5 GPIO_ACTIVE_HIGH> /* Pinky column */
-        , <&gpio0 4 GPIO_ACTIVE_HIGH> /* Outer column (now inner on right) */
+        = <&pro_micro 9 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 8 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 7 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 6 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 5 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 4 GPIO_ACTIVE_HIGH>
         ;
 };
