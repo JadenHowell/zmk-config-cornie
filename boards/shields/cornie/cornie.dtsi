@@ -19,10 +19,10 @@
         >;
     };
 
-    kscan0: kscan {
+    kscan0: kscan0 {
         compatible = "zmk,kscan-gpio-matrix";
-        label = "KSCAN";
         diode-direction = "col2row";
+        wakeup-source;
 
         /* Rows are specified in order from top to bottom */
         row-gpios 
