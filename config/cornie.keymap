@@ -57,7 +57,7 @@
 //                    |_____|     |     |   |     |      |_____|
                         bindings = <
    &kp ESC      &kp FSLH         &kp UNDER     &kp BSLH      &kp LBKT     &kp RBKT            &trans   &trans    &kp UP    &trans     &kp DEL     &kp END
-   &trans       &kp KP_PLUS      &kp KP_MINUS  &kp KP_EQUAL  &kp KP_LPAR  &kp KP_RPAR         &trans   &kp LEFT  &kp DOWN  &kp RIGHT  $kp COLON   &kp DQT
+   &trans       &kp KP_PLUS      &kp KP_MINUS  &kp KP_EQUAL  &kp KP_LPAR  &kp KP_RPAR         &trans   &kp LEFT  &kp DOWN  &kp RIGHT  &kp COLON   &kp DQT
    &kp LSHFT    &kp KP_ASTERISK  &kp LT        &kp GT        &kp LBRC     &kp RBRC            &trans   &trans    &trans    &trans     &trans      &kp HOME
                                                &trans        &trans       &trans              &trans   &trans    &trans
                         >;
